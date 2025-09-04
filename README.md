@@ -1,4 +1,5 @@
 # BlinkIT Grocery Data Analysis using SQL
+![Blinkit Logo]()
 
 ## Overview
 
