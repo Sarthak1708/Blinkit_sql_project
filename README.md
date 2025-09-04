@@ -50,48 +50,53 @@ CREATE TABLE blinkit_data (
 ### Business Problems & Solutions
 
 ### 1. Total Sales
-   
+
+**Objective:** Find the total sales in millions.
 ```sql
 SELECT CAST(SUM(Total_Sales) / 1000000.0 AS DECIMAL(10,2)) AS Total_Sales_Million
 FROM blinkit_data;
 ```
 
-**Objective:** Find the total sales in millions.
-
 ### 2. Average Sales
+
+**Objective:** Calculate average sales per order.
 ```sql
 SELECT CAST(AVG(Total_Sales) AS INT) AS Avg_Sales
 FROM blinkit_data;
 ```
 
-**Objective:** Calculate average sales per order.
-
 ### 3. Number of Orders
+
+**Objective:** Count the number of transactions/orders.
 ```sql
 SELECT COUNT(*) AS No_of_Orders
 FROM blinkit_data;
 ```
 
-**Objective:** Count the number of transactions/orders.
 
 ### 4. Average Rating
+
+**Objective:** Find the average customer rating.
+
 ```sql
 SELECT CAST(AVG(Rating) AS DECIMAL(10,1)) AS Avg_Rating
 FROM blinkit_data;
 ```
 
-**Objective:** Find the average customer rating.
-
 ### 5. Sales by Fat Content
+
+**Objective:** Understand how fat content influences sales.
+
 ```sql
 SELECT Item_Fat_Content, CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales
 FROM blinkit_data
 GROUP BY Item_Fat_Content;
 ```
 
-**Objective:** Understand how fat content influences sales.
-
 ### 6. Sales by Item Type
+
+**Objective:** Identify the highest selling product categories.
+
 ```sql
 SELECT Item_Type, CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales
 FROM blinkit_data
@@ -99,9 +104,10 @@ GROUP BY Item_Type
 ORDER BY Total_Sales DESC;
 ```
 
-**Objective:** Identify the highest selling product categories.
-
 ### 7. Fat Content by Outlet (Pivot Analysis)
+
+**Objective:** Compare fat content sales across outlet locations.
+
 ```sql
 SELECT Outlet_Location_Type,
     COALESCE(SUM(Total_Sales) FILTER (WHERE Item_Fat_Content = 'Low Fat'), 0) AS Low_Fat,
@@ -111,9 +117,10 @@ GROUP BY Outlet_Location_Type
 ORDER BY Outlet_Location_Type;
 ```
 
-**Objective:** Compare fat content sales across outlet locations.
-
 ### 8. Sales by Outlet Establishment Year
+
+**Objective:** Compare fat content sales across outlet locations. Analyze how outlet establishment year affects sales.
+
 ```sql
 SELECT Outlet_Establishment_Year, CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales
 FROM blinkit_data
@@ -121,9 +128,10 @@ GROUP BY Outlet_Establishment_Year
 ORDER BY Outlet_Establishment_Year;
 ```
 
-**Objective:** Compare fat content sales across outlet locations. Analyze how outlet establishment year affects sales.
-
 ### 9. Sales Percentage by Outlet Size
+
+**Objective:** Compare fat content sales across outlet locations. Find which outlet size contributes most to total sales.
+
 ```sql
 SELECT 
     Outlet_Size, 
@@ -134,9 +142,10 @@ GROUP BY Outlet_Size
 ORDER BY Total_Sales DESC;
 ```
 
-**Objective:** Compare fat content sales across outlet locations. Find which outlet size contributes most to total sales.
-
 ### 10. Sales by Outlet Location
+
+**Objective:** Compare fat content sales across outlet locations. Compare sales across different outlet locations.
+
 ```sql
 SELECT Outlet_Location_Type, CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales
 FROM blinkit_data
@@ -144,9 +153,10 @@ GROUP BY Outlet_Location_Type
 ORDER BY Total_Sales DESC;
 ```
 
-**Objective:** Compare fat content sales across outlet locations. Compare sales across different outlet locations.
-
 ### 11. All Metrics by Outlet Type
+
+**Objective:** Compare fat content sales across outlet locations. Get a combined view of all metrics by outlet type.
+
 ```sql
 SELECT Outlet_Type, 
        CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales,
@@ -158,8 +168,6 @@ FROM blinkit_data
 GROUP BY Outlet_Type
 ORDER BY Total_Sales DESC;
 ```
-
-**Objective:** Compare fat content sales across outlet locations. Get a combined view of all metrics by outlet type.
 
 ## Findings & Conclusion
 
