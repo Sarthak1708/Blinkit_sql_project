@@ -1,5 +1,4 @@
-# BLINKIT SQL PROJECT
-BlinkIT Grocery Data Analysis using SQL
+# BlinkIT Grocery Data Analysis using SQL
 
 📌 Overview
 
