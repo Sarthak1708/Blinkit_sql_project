@@ -171,8 +171,8 @@ ORDER BY Total_Sales DESC;
 
 ## Findings & Conclusion
 
-**Total Sales:** The dataset highlights millions in grocery sales across different outlets.
-**Product Insights:** Regular-fat items and certain item categories dominate sales.
-**Outlet Insights:** Larger outlets and Tier 1 locations contribute the highest revenue.
-**Customer Behavior:** Ratings remain consistent, but sales vary strongly by outlet type and size.
-**Business Value:** These insights can guide inventory planning, outlet expansion, and product promotion strategies.
+- **Total Sales:** The dataset highlights millions in grocery sales across different outlets.
+- **Product Insights:** Regular-fat items and certain item categories dominate sales.
+- **Outlet Insights:** Larger outlets and Tier 1 locations contribute the highest revenue.
+- **Customer Behavior:** Ratings remain consistent, but sales vary strongly by outlet type and size.
+- **Business Value:** These insights can guide inventory planning, outlet expansion, and product promotion strategies.
