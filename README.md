@@ -8,26 +8,26 @@ The following README provides objectives, dataset schema, business problems, que
 
 ## Objectives
 
-Clean and preprocess the dataset.
-Analyze total and average sales performance.
-Understand sales distribution across fat content, item type, outlet size, and location.
-Derive insights into customer preferences and outlet performance.
-Provide a foundation for business decision-making using SQL queries.
+- Clean and preprocess the dataset.
+- Analyze total and average sales performance.
+- Understand sales distribution across fat content, item type, outlet size, and location.
+- Derive insights into customer preferences and outlet performance.
+- Provide a foundation for business decision-making using SQL queries.
 
 Columns:
 
-Item_Fat_Content – Fat content of the product
-Item_Identifier – Unique product ID
-Item_Type – Type/category of product
-Outlet_Establishment_Year – Year when the outlet was established
-Outlet_Identifier – Unique outlet ID
-Outlet_Location_Type – Location tier (e.g., Tier 1, Tier 2, Tier 3)
-Outlet_Size – Size of the outlet (Small/Medium/High)
-Outlet_Type – Outlet type (Supermarket/Grocery Store)
-Item_Visibility – Percentage visibility of the item in the store
-Item_Weight – Weight of the item
-Total_Sales – Sales amount
-Rating – Customer rating
+- Item_Fat_Content – Fat content of the product
+- Item_Identifier – Unique product ID
+- Item_Type – Type/category of product
+- Outlet_Establishment_Year – Year when the outlet was established
+- Outlet_Identifier – Unique outlet ID
+- Outlet_Location_Type – Location tier (e.g., Tier 1, Tier 2, Tier 3)
+- Outlet_Size – Size of the outlet (Small/Medium/High)
+- Outlet_Type – Outlet type (Supermarket/Grocery Store)
+- Item_Visibility – Percentage visibility of the item in the store
+- Item_Weight – Weight of the item
+- Total_Sales – Sales amount
+- Rating – Customer rating
 
 ## Schema
 ```sql
