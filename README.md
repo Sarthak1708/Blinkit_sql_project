@@ -1,1 +1,1 @@
-# Blinkit_sql_project
+# BLINKIT PROJECT
